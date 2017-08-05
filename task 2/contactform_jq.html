@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+	Author: Anvar Djumaev -> adjuma01@mail.bbk.ac.uk
+-->
+<html>
+
+   <head>
+      <title>Contact form</title>
+	  <link rel="stylesheet" type="text/css" href="contactform_jq.css">
+	  
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	  <script type="text/javascript" src="contactform_jq.js" charset="UTF-8"></script>
+	  <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+   </head>
+
+   <body>
+	<form class = "form_contact" id = "form_cont">
+		<fieldset>
+			<legend>Please provide your name, email and Health Authority Number</legend>
+			<p>
+				<label for = "first_name">First name: </label>
+				<input id = "first_name" name = "first_name" placeholder='Enter first name'  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter first name'"
+				type = "text">
+			</p>
+			 
+			 <p>
+				<label for = "last_name">Last name: </label>
+				<input id = "last_name" name = "last_name" placeholder='Enter last name'  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter last name'"
+				type = "text"/>
+			</p>
+			
+			<p>
+				<label for = "title_dropdown">Title:</label>
+				<select id = "title_dropdown">
+					<option value = "Mr" selected>Mr.</option>
+					<option value = "Mrs">Mrs</option>
+					<option value = "Ms">Ms.</option>
+					<option value = "Miss">Miss.</option>
+					<option value = "Master">Master</option>
+				</select>
+			</p>
+			
+			<p>
+				<div class="tooltip"><img src="icon-32.png" width = "24px" height = "24px" alt="Tooltip Icon">
+				<span class="tooltiptext">If you do not know your ZHA number, please contact your GP</span>
+				</div>
+
+				<label for = "ha_number">Health Authority Number: </label>
+				<input type = "text" id = "ha_number" name = "ha_number" placeholder='Enter HA number'  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter HA number'"/>
+				<div class = "error" id = ha_num_val  style="visibility: hidden;"></div>
+			</p>
+			
+			<p>
+				<label for = "email">Email: </label>
+				<input id = "email" name = "email" placeholder='Enter email'  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'"
+				type = "email"/>
+			</p>
+			
+			<p>
+				<label for = "tl_number">Telephone Number: </label>
+				<input type = "text" id = "tl_number" name = "tl_number" placeholder='Enter telephone number'  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter telephone number'"/>
+				<div class = "error" id = tl_number_val  style="visibility: hidden;"></div>
+			</p>
+
+			<input id = "form_button" type="submit" value="Submit">
+		</fieldset>
+	</form>
+	
+	<div id = "result" style="visibility: hidden;">
+	</div>
+   </body>
+
+</html>
