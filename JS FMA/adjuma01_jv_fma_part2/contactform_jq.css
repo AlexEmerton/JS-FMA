@@ -1,0 +1,63 @@
+.form_contact label {
+	display: inline-block;
+    vertical-align: baseline;
+}
+
+.form_contact{
+	width: 90%;
+}
+
+.form_contact label.error{
+	margin-left:10px;
+	width:auto;
+	display:inline;
+}
+
+.error{
+	color: red;
+}
+
+/* The majority of css code for tooltips courtesy of w3schools*/
+/* Source at: https://www.w3schools.com/howto/howto_css_tooltip.asp*/
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 170px;
+    background-color: #4f4f4f;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 190%;
+    margin-left: -60px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 80%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

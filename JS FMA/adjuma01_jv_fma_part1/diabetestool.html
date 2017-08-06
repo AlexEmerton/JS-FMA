@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+	Author: Anvar Djumaev -> adjuma01@mail.bbk.ac.uk
+-->
+<html>
+
+   <head>
+		<meta charset="utf-8">
+		<title>Diabetes Risk Assessment</title>
+		<script type="text/javascript" src="diabetestool.js" charset="UTF-8"></script>
+		<link rel="stylesheet" type="text/css" href="diabetestool.css">
+   </head>
+
+   <body>
+	<form  class = "form_calc" name = "form_calc" onsubmit="return false">
+		<fieldset>
+			<p>
+				<label>How old are you?</label>
+				<input class = "input" type = "radio" name = "age" value = "0" checked = "checked"> 1-25
+				<input class = "input" type = "radio" name = "age" value = "5"> 26-40
+				<input class = "input" type = "radio" name = "age" value = "8"> 41-60
+				<input class = "input" type = "radio" name = "age" value = "10"> 60+
+			</p>
+			
+			<p>
+				<label>What is your BMI?</label>
+				<input class = "input" type = "radio" name = "BMI" value = "0" checked="checked"> 0-25
+				<input class = "input" type = "radio" name = "BMI" value = "0"> 26-30
+				<input class = "input" type = "radio" name = "BMI" value = "9"> 31-35
+				<input class = "input" type = "radio" name = "BMI" value = "10"> 35+
+			</p>
+			
+			<p>
+				<label>Does anybody in your family have diabetes?</label>
+				<input class = "input" type = "radio" name = "genetics" value = "0" checked="checked"> No
+				<input class = "input" type = "radio" name = "genetics" value = "7"> Grandparent
+				<input class = "input" type = "radio" name = "genetics" value = "15"> Sibling
+				<input class = "input" type = "radio" name = "genetics" value = "15"> Parent
+			</p>
+			
+			<p>
+				<label>How would you describe your diet?</label>
+				<input class = "input" type = "radio" name = "diet" value = "0" checked="checked"> Low sugar
+				<input class = "input" type = "radio" name = "diet" value = "0"> Normal sugar
+				<input class = "input" type = "radio" name = "diet" value = "7"> Quite high sugar
+				<input class = "input" type = "radio" name = "diet" value = "10"> High sugar
+			</p>
+			
+		   <input name = "form_button" type="submit" value="Calculate" onclick = "prForm()">
+		</fieldset>
+	</form>
+	
+	<div id = "result" style="visibility: hidden;">
+	</div>
+   </body>
+
+</html>
